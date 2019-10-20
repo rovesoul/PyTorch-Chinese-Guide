@@ -9,6 +9,9 @@ learn Pytorch. step by step
 
 本readme更新日期2019-10-20
 
+整理不易，欢迎进行鼓励：
+
+
 # 参考学习文件：
 - [莫烦老师pytorch教程](https://morvanzhou.github.io/tutorials/machine-learning/torch/)
 - [hengtao tantai的github](https://github.com/zergtant/pytorch-handbook)
