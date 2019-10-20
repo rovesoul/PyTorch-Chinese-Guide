@@ -10,7 +10,7 @@ learn Pytorch. step by step
 本readme更新日期2019-10-20
 
 整理不易，欢迎进行鼓励：
-![QR](https://github.com/rovesoul/PyTorch-Chinese-Guide/blob/master/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202019-10-20%20%E4%B8%8B%E5%8D%8810.44.50.png)
+![QR](https://github.com/rovesoul/PyTorch-Chinese-Guide/blob/master/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202019-10-20%20%E4%B8%8B%E5%8D%8810.50.07.png)
 
 # 参考学习文件：
 - [莫烦老师pytorch教程](https://morvanzhou.github.io/tutorials/machine-learning/torch/)
