@@ -24,3 +24,7 @@ learn Pytorch. step by step
 - [PyTorch官网API文档](https://pytorch.org/docs/stable/torch.html)
 - [云课堂pytorch教学]()
 - [FB的pytorch深度学习教程]()
+
+
+# 训练集下载
+- kaggle自己找
