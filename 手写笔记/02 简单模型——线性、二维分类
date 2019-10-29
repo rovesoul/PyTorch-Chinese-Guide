@@ -1,0 +1,54 @@
+# 02 简单模型——线性、二维分类
+> 监督学习
+
+- 需要人为定义好——标记数据集，送给模型去学习
+
+> 非监督学习
+与上边相反
+
+> 线性模型
+y=wx+b
+- 梯度下降
+    - 梯度就是导数
+    - 多个变量就是每个变量求导数
+    - 梯度下降法就是找最小的梯度 
+    - 误差函数 {1/n * sum((yi'-yi)^2)}
+    - w = w - lr*(梯度) 
+    - 学习率lr解读：不能一步走全了误差，每一步都小一点，lr就是这些步子多小的参数
+
+> Logistic 回归模型
+「y=Sigmoid( ωx + b )」
+- 学习五小时能过吗
+- 包好看超没超1000
+- 所以⬆️主要应对分类问题
+- 比线性回归模型多了一个Sigmoid函数
+    - 第一步计算wx+b
+    - 第二步加sigmoid
+- Loss函数 
+- pytorch中是`F.sigmoid`
+- pytorch自带
+    - [sigmoid函数](https://pytorch.org/docs/stable/nn.functional.html#sigmoid)
+    - [functions](https://pytorch.org/docs/stable/nn.functional.html#loss-functions)
+    - [optim优化器-SGD](https://pytorch.org/docs/stable/optim.html#torch.optim.SGD)
+    - [二分类BCEWithLogitsLoss](https://pytorch.org/docs/stable/nn.html#bcewithlogitsloss)
+    - 使用（下边的事没有用BCEWLloss公式的，所以loss是自己def的）：
+```
+def logistic_regression(x):
+    return F.sigmoid(torch.mm(x,w)+b)
+
+def binary_loss(y_pred,y):
+    logits = (y*y_pred.clamp(1e-12).log()+(1-y)*(1-y_pred).clamp(1e-12).log()).mean()
+    return -logits
+
+optimizer = torch.optim.SGD([w,b],lr=1.)
+
+for e in range(1000):
+    y_pred = logistic_regression(x_data)
+    loss = binary_loss(y_pred,y_data) #计算loss
+    #更新参数
+    optimizer.zero_grad() #使用优化器梯度归零
+    loss.backward()
+    optimizer.step() #使用优化器来更新参数，即修正w、b
+    ………………
+```
+
